@@ -72,3 +72,65 @@ def test_header_path_and_spans(doc):
     for c in chunk_section(doc):
         assert c.header_path.split(" > ")[-1].startswith(c.section_id)
         assert c.line_start <= c.line_end
+
+
+# ---- equation-aware and hierarchical ---------------------------------------
+from src.chunking.equation import chunk_equation  # noqa: E402
+from src.chunking.hierarchical import chunk_hierarchical  # noqa: E402
+
+
+@pytest.fixture(scope="module")
+def eq_chunks(doc):
+    return chunk_equation(doc)
+
+
+@pytest.fixture(scope="module")
+def hier(doc):
+    return chunk_hierarchical(doc)
+
+
+def test_equation_chunks_never_cut_and_cover_all(doc, flat, eq_chunks):
+    assert not any(c.cut_equation_ids for c in eq_chunks)
+    assert {e for c in eq_chunks for e in c.equation_ids} == \
+        {b.equation_id for _, b in doc.iter_equations()}
+    assert covers_everything(eq_chunks, flat)  # prose is not lost
+
+
+def test_equation_chunk_has_context_sentences(eq_chunks):
+    c = next(c for c in eq_chunks if "6:eq3" in c.equation_ids)
+    assert c.text.startswith("This works as long as") or "Thus, let" in c.text
+    assert r"\frac{1}{2}m^2\phi^2" in c.text
+
+
+def test_hierarchical_parent_links(hier):
+    byid = {c.chunk_id: c for c in hier}
+    assert len(byid) == len(hier)  # unique ids
+    for c in hier:
+        if c.chunk_type == "section":
+            assert c.parent_id is None
+        elif c.chunk_type == "derivation":
+            assert byid[c.parent_id].chunk_type == "section"
+        else:
+            assert c.chunk_type in ("equation", "prose")
+            parent = byid[c.parent_id]
+            assert parent.chunk_type == "derivation"
+            assert c.text in parent.text  # nesting: leaf lies inside its parent
+            assert c.section_id == parent.section_id
+
+
+def test_hierarchical_no_cut_equations_and_derivations_tile_section(hier):
+    assert not any(c.cut_equation_ids for c in hier)
+    byid = {c.chunk_id: c for c in hier}
+    for sec in (c for c in hier if c.chunk_type == "section"):
+        kids = [c for c in hier if c.parent_id == sec.chunk_id]
+        assert kids and all(k.chunk_type == "derivation" for k in kids)
+        starts = [sec.text.index(k.text) for k in kids]
+        assert starts == sorted(starts)
+        assert kids[0].text[:40] == sec.text[:40] and kids[-1].text[-40:] == sec.text[-40:]
+
+
+def test_kg_action_derivation_keeps_equations_with_intro(hier):
+    byid = {c.chunk_id: c for c in hier}
+    leaf = next(c for c in hier if c.chunk_type == "equation" and "6:eq3" in c.equation_ids)
+    deriv = byid[leaf.parent_id]
+    assert "6:eq3" in deriv.equation_ids and "Thus, let" in deriv.text

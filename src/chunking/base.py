@@ -129,6 +129,13 @@ def flatten(doc: Document) -> Flat:
     return Flat("\n\n".join(parts), segs, sections)
 
 
+def segs_by_section(flat: Flat) -> dict[str, list[Seg]]:
+    out: dict[str, list[Seg]] = {}
+    for seg in flat.segs:
+        out.setdefault(seg.section.section_id, []).append(seg)
+    return out
+
+
 def make_chunk(flat: Flat, start: int, end: int, strategy: str, n: int,
                chunk_type: str = "window") -> Chunk | None:
     """Build a Chunk from the character span [start, end) of the flat text."""

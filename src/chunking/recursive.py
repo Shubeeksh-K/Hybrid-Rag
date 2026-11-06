@@ -47,23 +47,19 @@ def _split(text: str, start: int, end: int, seps: list[str], size: int) -> list[
     return out
 
 
-def chunk_recursive(doc: Document, size: int = CHUNK_TOKENS, overlap: int = OVERLAP_TOKENS) -> list[Chunk]:
-    flat = flatten(doc)
-    pieces = _split(flat.text, 0, len(flat.text), SEPARATORS, size)
-    sizes = [count_tokens(flat.text[a:b]) for a, b in pieces]
+def recursive_spans(text: str, start: int, end: int, size: int = CHUNK_TOKENS,
+                    overlap: int = OVERLAP_TOKENS) -> list[tuple[int, int]]:
+    """Merged chunk spans for text[start:end] (reusable on any sub-range)."""
+    pieces = _split(text, start, end, SEPARATORS, size)
+    sizes = [count_tokens(text[a:b]) for a, b in pieces]
 
-    chunks: list[Chunk] = []
+    spans: list[tuple[int, int]] = []
     cur: list[int] = []   # indices into pieces
     total, fresh = 0, 0   # fresh = pieces not yet emitted in any chunk
 
-    def emit():
-        c = make_chunk(flat, pieces[cur[0]][0], pieces[cur[-1]][1], "recursive", len(chunks))
-        if c:
-            chunks.append(c)
-
     for i, t in enumerate(sizes):
         if total + t > size and cur:
-            emit()
+            spans.append((pieces[cur[0]][0], pieces[cur[-1]][1]))
             fresh = 0
             while cur and (total > overlap or total + t > size):
                 total -= sizes[cur.pop(0)]
@@ -71,5 +67,15 @@ def chunk_recursive(doc: Document, size: int = CHUNK_TOKENS, overlap: int = OVER
         total += t
         fresh += 1
     if cur and fresh:
-        emit()
+        spans.append((pieces[cur[0]][0], pieces[cur[-1]][1]))
+    return spans
+
+
+def chunk_recursive(doc: Document, size: int = CHUNK_TOKENS, overlap: int = OVERLAP_TOKENS) -> list[Chunk]:
+    flat = flatten(doc)
+    chunks: list[Chunk] = []
+    for a, b in recursive_spans(flat.text, 0, len(flat.text), size, overlap):
+        c = make_chunk(flat, a, b, "recursive", len(chunks))
+        if c:
+            chunks.append(c)
     return chunks
