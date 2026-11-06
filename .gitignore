@@ -1,0 +1,13 @@
+# Environment
+.venv/
+.env
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Third-party source text (fetch with scripts/fetch_data.py; do not redistribute)
+data/raw/
+data/processed/
+
+# OS / editor
+.DS_Store
