@@ -203,7 +203,8 @@ def parse(path: Path = DEFAULT_SRC, doc_id: str = "date2207",
             Block(
                 block_id=next_block_id(sec),
                 type="equation",
-                content=inner.strip(),
+                # drop blank lines left behind by stripped % comments
+                content=re.sub(r"\n[ \t]*(?=\n)", "", inner.strip()),
                 line_start=line_of(start),
                 line_end=line_of(end - 1),
                 equation_id=f"{sec.section_id}:eq{eq_n[sec.section_id]}",
