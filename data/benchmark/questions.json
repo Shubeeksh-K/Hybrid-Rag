@@ -1,0 +1,864 @@
+[
+  {
+    "id": "Q01",
+    "type": "concept",
+    "query": "How is the Klein-Gordon equation derived from an action principle?",
+    "answer_hint": "Vary S[phi] = int(-1/2 d phi d phi - 1/2 m^2 phi^2); the boundary term drops and (Box - m^2)phi = 0 follows.",
+    "gold_items": [
+      "6:eq3",
+      "6:b17",
+      "6:b18"
+    ],
+    "gold_blocks": [
+      "6:b16",
+      "6:b17",
+      "6:b18"
+    ],
+    "gold_sections": [
+      "6"
+    ],
+    "similar_equations": [],
+    "confidence": "high",
+    "reviewer": "Shubeeksh",
+    "status": "draft"
+  },
+  {
+    "id": "Q02",
+    "type": "concept",
+    "query": "What does Noether's theorem say about symmetries of the action?",
+    "answer_hint": "Every infinitesimal symmetry of the action gives a current conserved on solutions of the equations of motion.",
+    "gold_items": [
+      "6.1:b9",
+      "6.1:b23",
+      "6.1:eq8"
+    ],
+    "gold_blocks": [
+      "6.1:b9",
+      "6.1:b23",
+      "6.1:b24"
+    ],
+    "gold_sections": [
+      "6.1"
+    ],
+    "similar_equations": [],
+    "confidence": "high",
+    "reviewer": "Helen",
+    "status": "draft"
+  },
+  {
+    "id": "Q03",
+    "type": "concept",
+    "query": "How are the irreducible representations of the Poincare group labelled by Casimir invariants?",
+    "answer_hint": "P^2 (the mass) and the square of the Pauli-Lubanski vector are Casimirs whose values classify the representations.",
+    "gold_items": [
+      "2.2:b3",
+      "2.2:b4",
+      "2.1:b22",
+      "2.3:eq6"
+    ],
+    "gold_blocks": [
+      "2.2:b3",
+      "2.2:b4",
+      "2.1:b22",
+      "2.3:b23"
+    ],
+    "gold_sections": [
+      "2.1",
+      "2.2",
+      "2.3"
+    ],
+    "similar_equations": [],
+    "confidence": "medium",
+    "reviewer": "Sanjay",
+    "status": "draft"
+  },
+  {
+    "id": "Q04",
+    "type": "concept",
+    "query": "What are the retarded, advanced and Feynman prescriptions for the Green's function of the Klein-Gordon operator?",
+    "answer_hint": "The same Green's function integral with different contour choices gives retarded, advanced or Feynman propagators.",
+    "gold_items": [
+      "7.3:eq4",
+      "7.3:eq5",
+      "7.3:eq6",
+      "7.3:b18"
+    ],
+    "gold_blocks": [
+      "7.3:b10",
+      "7.3:b12",
+      "7.3:b15",
+      "7.3:b18"
+    ],
+    "gold_sections": [
+      "7.3"
+    ],
+    "similar_equations": [],
+    "confidence": "high",
+    "reviewer": "Shreya",
+    "status": "draft"
+  },
+  {
+    "id": "Q05",
+    "type": "concept",
+    "query": "What is the Kallen-Lehmann spectral representation of the two-point function?",
+    "answer_hint": "The interacting two-point function is a superposition of free propagators weighted by a spectral density rho(sigma^2).",
+    "gold_items": [
+      "10.3:eq6",
+      "10.3:b15"
+    ],
+    "gold_blocks": [
+      "10.3:b14",
+      "10.3:b15"
+    ],
+    "gold_sections": [
+      "10.3"
+    ],
+    "similar_equations": [],
+    "confidence": "medium",
+    "reviewer": "Shubeeksh",
+    "status": "draft"
+  },
+  {
+    "id": "Q06",
+    "type": "concept",
+    "query": "How does LSZ reduction express S-matrix elements through time-ordered correlation functions of the scalar field?",
+    "answer_hint": "Asymptotic states are replaced by field insertions acted on by (Box - m^2); S-matrix = amputated correlation function.",
+    "gold_items": [
+      "10.5.1:eq6",
+      "10.5.1:eq7",
+      "10.5.1:b17"
+    ],
+    "gold_blocks": [
+      "10.5.1:b13",
+      "10.5.1:b15",
+      "10.5.1:b17"
+    ],
+    "gold_sections": [
+      "10.5.1"
+    ],
+    "similar_equations": [],
+    "confidence": "high",
+    "reviewer": "Helen",
+    "status": "draft"
+  },
+  {
+    "id": "Q07",
+    "type": "concept",
+    "query": "What does Wick's theorem state for a time-ordered product of fields?",
+    "answer_hint": "A time-ordered product equals the normal-ordered product plus all contractions (pairings by propagators).",
+    "gold_items": [
+      "11.1:b14",
+      "11.1:eq2"
+    ],
+    "gold_blocks": [
+      "11.1:b14",
+      "11.1:b15"
+    ],
+    "gold_sections": [
+      "11.1"
+    ],
+    "similar_equations": [],
+    "confidence": "high",
+    "reviewer": "Sanjay",
+    "status": "draft"
+  },
+  {
+    "id": "Q08",
+    "type": "concept",
+    "query": "How is the Ward identity q_mu M^mu = 0 proved for the photon self-energy?",
+    "answer_hint": "Insert q-slash between propagators, use 1/(p+q-slash+m) q-slash 1/(p-slash+m) identity; the sum telescopes to zero.",
+    "gold_items": [
+      "16.2.1:eq3",
+      "16.2.1:eq5",
+      "16.2.1:eq8",
+      "16.2.1:b20"
+    ],
+    "gold_blocks": [
+      "16.2.1:b5",
+      "16.2.1:b9",
+      "16.2.1:b17",
+      "16.2.1:b20"
+    ],
+    "gold_sections": [
+      "16.2.1"
+    ],
+    "similar_equations": [],
+    "confidence": "high",
+    "reviewer": "Shreya",
+    "status": "draft"
+  },
+  {
+    "id": "Q09",
+    "type": "concept",
+    "query": "How does the anomalous magnetic moment of the electron arise from the vertex form factors?",
+    "answer_hint": "Magnetic moment is proportional to F1(0)+F2(0); g=2 is Dirac, and F2(0) != 0 (a QED effect) is the anomalous moment.",
+    "gold_items": [
+      "16.4:b23",
+      "16.4:eq7",
+      "16.4:eq8"
+    ],
+    "gold_blocks": [
+      "16.4:b23",
+      "16.4:b20",
+      "16.4:b22"
+    ],
+    "gold_sections": [
+      "16.4"
+    ],
+    "similar_equations": [],
+    "confidence": "high",
+    "reviewer": "Shubeeksh",
+    "status": "draft"
+  },
+  {
+    "id": "Q10",
+    "type": "concept",
+    "query": "How does vacuum polarization lead to charge screening and a running coupling?",
+    "answer_hint": "The dressed photon propagator carries 1/(1 - Pi(q^2)); Pi(q^2) - Pi(0) makes the effective alpha grow with |q^2|.",
+    "gold_items": [
+      "18.2.1:eq1",
+      "18.2.1:eq4"
+    ],
+    "gold_blocks": [
+      "18.2.1:b3",
+      "18.2.1:b10"
+    ],
+    "gold_sections": [
+      "18.2.1"
+    ],
+    "similar_equations": [],
+    "confidence": "medium",
+    "reviewer": "Helen",
+    "status": "draft"
+  },
+  {
+    "id": "Q11",
+    "type": "concept",
+    "query": "How does power counting determine the superficial degree of divergence of a Feynman diagram?",
+    "answer_hint": "Count loop momenta and propagators: D = d - (d-2)E/2 + sum n_k (k(d-2)/2 - d).",
+    "gold_items": [
+      "19.1:b3",
+      "19.1:eq1"
+    ],
+    "gold_blocks": [
+      "19.1:b3",
+      "19.1:b4"
+    ],
+    "gold_sections": [
+      "19.1"
+    ],
+    "similar_equations": [],
+    "confidence": "high",
+    "reviewer": "Sanjay",
+    "status": "draft"
+  },
+  {
+    "id": "Q12",
+    "type": "concept",
+    "query": "How is the path integral derived from the quantum-mechanical transition amplitude?",
+    "answer_hint": "Slice the time evolution into N steps, insert complete sets of states, and take N -> infinity to get int Dq Dp exp(iS).",
+    "gold_items": [
+      "20.2:b1",
+      "20.2:b3",
+      "20.2:eq7",
+      "20.2:eq10",
+      "20.2:eq12"
+    ],
+    "gold_blocks": [
+      "20.2:b1",
+      "20.2:b3",
+      "20.2:b16",
+      "20.2:b22",
+      "20.2:b26"
+    ],
+    "gold_sections": [
+      "20.2"
+    ],
+    "similar_equations": [],
+    "confidence": "high",
+    "reviewer": "Shreya",
+    "status": "draft"
+  },
+  {
+    "id": "Q13",
+    "type": "concept",
+    "query": "How is the effective action defined as the Legendre transform of the generating functional W[J]?",
+    "answer_hint": "Gamma[Phi] = W[J] - int J Phi, generating 1PI diagrams.",
+    "gold_items": [
+      "22.1:b12",
+      "22.1:eq10"
+    ],
+    "gold_blocks": [
+      "22.1:b12",
+      "22.1:b25"
+    ],
+    "gold_sections": [
+      "22.1"
+    ],
+    "similar_equations": [],
+    "confidence": "high",
+    "reviewer": "Shubeeksh",
+    "status": "draft"
+  },
+  {
+    "id": "Q14",
+    "type": "concept",
+    "query": "What is the renormalization group equation and how is the beta function defined?",
+    "answer_hint": "mu d Gamma_n/d mu = 0 gives (mu d/dmu + beta d/dg - n gamma) Gamma_n = 0, with beta = mu dg/dmu.",
+    "gold_items": [
+      "22.2:eq3",
+      "22.2:eq4"
+    ],
+    "gold_blocks": [
+      "22.2:b6",
+      "22.2:b8"
+    ],
+    "gold_sections": [
+      "22.2"
+    ],
+    "similar_equations": [],
+    "confidence": "high",
+    "reviewer": "Helen",
+    "status": "draft"
+  },
+  {
+    "id": "Q15",
+    "type": "equation",
+    "query": "(\\Box - m^2)\\phi = 0",
+    "answer_hint": "The Klein-Gordon field equation (appears inside the action variation and in the field-equation summary).",
+    "gold_items": [
+      "6:b18",
+      "6:eq3",
+      "3.3:eq4"
+    ],
+    "gold_blocks": [
+      "6:b18",
+      "6:b16",
+      "3.3:b31"
+    ],
+    "gold_sections": [
+      "3.3",
+      "6"
+    ],
+    "similar_equations": [],
+    "confidence": "medium",
+    "reviewer": "Sanjay",
+    "status": "draft"
+  },
+  {
+    "id": "Q16",
+    "type": "equation",
+    "query": "\\gamma^{\\mu}\\gamma^{\\nu} + \\gamma^{\\nu}\\gamma^{\\mu} = -2\\eta^{\\mu\\nu}",
+    "answer_hint": "Defining relation of the Clifford algebra of gamma matrices (mostly-plus metric convention).",
+    "gold_items": [
+      "3.3:eq2"
+    ],
+    "gold_blocks": [
+      "3.3:b5"
+    ],
+    "gold_sections": [
+      "3.3"
+    ],
+    "similar_equations": [],
+    "confidence": "high",
+    "reviewer": "Shreya",
+    "status": "draft"
+  },
+  {
+    "id": "Q17",
+    "type": "equation",
+    "query": "\\left[M^{\\mu\\nu}, M^{\\alpha\\beta}\\right] = i\\left(\\eta^{\\mu\\alpha}M^{\\nu\\beta} - \\dots\\right)",
+    "answer_hint": "Lorentz-algebra commutator of the Poincare generators.",
+    "gold_items": [
+      "2.1:eq6"
+    ],
+    "gold_blocks": [
+      "2.1:b19"
+    ],
+    "gold_sections": [
+      "2.1"
+    ],
+    "similar_equations": [],
+    "confidence": "high",
+    "reviewer": "Shubeeksh",
+    "status": "draft"
+  },
+  {
+    "id": "Q18",
+    "type": "equation",
+    "query": "W^2|\\hat{k},\\sigma\\rangle = m^2 j(j+1)|\\hat{k},\\sigma\\rangle",
+    "answer_hint": "Eigenvalue of the squared Pauli-Lubanski vector on massive states.",
+    "gold_items": [
+      "2.3:eq6"
+    ],
+    "gold_blocks": [
+      "2.3:b23"
+    ],
+    "gold_sections": [
+      "2.3"
+    ],
+    "similar_equations": [],
+    "confidence": "high",
+    "reviewer": "Helen",
+    "status": "draft"
+  },
+  {
+    "id": "Q19",
+    "type": "equation",
+    "query": "T_{\\mu\\nu} = \\partial_{\\mu}\\phi\\partial_{\\nu}\\phi + \\eta_{\\mu\\nu}\\mathcal{L}",
+    "answer_hint": "Energy-momentum tensor of the free scalar field.",
+    "gold_items": [
+      "6.2:eq1",
+      "6.1:eq8"
+    ],
+    "gold_blocks": [
+      "6.2:b2",
+      "6.1:b24"
+    ],
+    "gold_sections": [
+      "6.1",
+      "6.2"
+    ],
+    "similar_equations": [],
+    "confidence": "high",
+    "reviewer": "Sanjay",
+    "status": "draft"
+  },
+  {
+    "id": "Q20",
+    "type": "equation",
+    "query": "P^0 = \\int d^3k\\ \\omega_{\\vec{k}}\\ a(\\vec{k})a^*(\\vec{k})",
+    "answer_hint": "Field energy in terms of mode amplitudes.",
+    "gold_items": [
+      "6.2:eq10"
+    ],
+    "gold_blocks": [
+      "6.2:b22"
+    ],
+    "gold_sections": [
+      "6.2"
+    ],
+    "similar_equations": [],
+    "confidence": "high",
+    "reviewer": "Shreya",
+    "status": "draft"
+  },
+  {
+    "id": "Q21",
+    "type": "equation",
+    "query": "\\Gamma[\\Phi] := W[J] - \\int d^4x\\, J(x)\\Phi(x)",
+    "answer_hint": "Legendre transform defining the effective action.",
+    "gold_items": [
+      "22.1:eq10"
+    ],
+    "gold_blocks": [
+      "22.1:b25"
+    ],
+    "gold_sections": [
+      "22.1"
+    ],
+    "similar_equations": [],
+    "confidence": "high",
+    "reviewer": "Shubeeksh",
+    "status": "draft"
+  },
+  {
+    "id": "Q22",
+    "type": "equation",
+    "query": "D = d - \\frac{d-2}{2}E + \\sum_{k\\ge 3}n_k\\left\\{k\\frac{d-2}{2} - d\\right\\}",
+    "answer_hint": "Superficial degree of divergence.",
+    "gold_items": [
+      "19.1:eq1",
+      "19.1:eq3"
+    ],
+    "gold_blocks": [
+      "19.1:b4",
+      "19.1:b32"
+    ],
+    "gold_sections": [
+      "19.1"
+    ],
+    "similar_equations": [],
+    "confidence": "high",
+    "reviewer": "Helen",
+    "status": "draft"
+  },
+  {
+    "id": "Q23",
+    "type": "equation",
+    "query": "\\frac{1}{\\omega'} - \\frac{1}{\\omega} = \\frac{1-\\cos\\theta}{m}",
+    "answer_hint": "Compton formula relating scattered photon frequency to angle.",
+    "gold_items": [
+      "14.2:eq18"
+    ],
+    "gold_blocks": [
+      "14.2:b44"
+    ],
+    "gold_sections": [
+      "14.2"
+    ],
+    "similar_equations": [
+      "14.2:eq24"
+    ],
+    "confidence": "high",
+    "reviewer": "Sanjay",
+    "status": "draft"
+  },
+  {
+    "id": "Q24",
+    "type": "equation",
+    "query": "\\beta(g) := \\mu\\frac{dg}{d\\mu}",
+    "answer_hint": "Definition of the beta function (together with the anomalous dimension).",
+    "gold_items": [
+      "22.2:eq4"
+    ],
+    "gold_blocks": [
+      "22.2:b8"
+    ],
+    "gold_sections": [
+      "22.2"
+    ],
+    "similar_equations": [],
+    "confidence": "high",
+    "reviewer": "Shreya",
+    "status": "draft"
+  },
+  {
+    "id": "Q25",
+    "type": "equation",
+    "query": "(\\Box_x - m^2)G(x,x') = -\\delta^4(x-x')",
+    "answer_hint": "Equation defining the Green's function of the Klein-Gordon operator.",
+    "gold_items": [
+      "7.3:eq1"
+    ],
+    "gold_blocks": [
+      "7.3:b2"
+    ],
+    "gold_sections": [
+      "7.3"
+    ],
+    "similar_equations": [],
+    "confidence": "high",
+    "reviewer": "Shubeeksh",
+    "status": "draft"
+  },
+  {
+    "id": "Q26",
+    "type": "equation",
+    "query": "(-i\\gamma^{\\mu}\\partial_{\\mu} + m)\\Psi = 0",
+    "answer_hint": "The Dirac equation.",
+    "gold_items": [
+      "4:eq11",
+      "4:eq10",
+      "7.2:eq2"
+    ],
+    "gold_blocks": [
+      "4:b37",
+      "4:b34",
+      "7.2:b4"
+    ],
+    "gold_sections": [
+      "4",
+      "7.2"
+    ],
+    "similar_equations": [
+      "7.2:eq3"
+    ],
+    "confidence": "medium",
+    "reviewer": "Helen",
+    "status": "draft"
+  },
+  {
+    "id": "Q27",
+    "type": "notation",
+    "query": "What is F_{\\mu\\nu} = \\partial_{\\mu}A_{\\nu} - \\partial_{\\nu}A_{\\mu} in terms of the Fourier modes of the Maxwell field?",
+    "answer_hint": "Field strength written through mode expansion of A_mu.",
+    "gold_items": [
+      "7.1:eq2"
+    ],
+    "gold_blocks": [
+      "7.1:b5"
+    ],
+    "gold_sections": [
+      "7.1"
+    ],
+    "similar_equations": [],
+    "confidence": "high",
+    "reviewer": "Sanjay",
+    "status": "draft"
+  },
+  {
+    "id": "Q28",
+    "type": "notation",
+    "query": "Why is J^0(v,u) = v^*\\partial^0 u - u\\partial^0 v^* a conserved inner product?",
+    "answer_hint": "Current J^mu built from two solutions is divergence-free, so its time component integrates to a constant.",
+    "gold_items": [
+      "4:eq3",
+      "4:eq2",
+      "4:eq1"
+    ],
+    "gold_blocks": [
+      "4:b8",
+      "4:b6",
+      "4:b4"
+    ],
+    "gold_sections": [
+      "4"
+    ],
+    "similar_equations": [],
+    "confidence": "high",
+    "reviewer": "Shreya",
+    "status": "draft"
+  },
+  {
+    "id": "Q29",
+    "type": "notation",
+    "query": "What is the Poisson bracket \\{a_{\\vec{k}}, a^*_{\\vec{k}'}\\} of the mode amplitudes?",
+    "answer_hint": "Bracket is -i delta^3(k - k').",
+    "gold_items": [
+      "7.2:eq15"
+    ],
+    "gold_blocks": [
+      "7.2:b37"
+    ],
+    "gold_sections": [
+      "7.2"
+    ],
+    "similar_equations": [],
+    "confidence": "high",
+    "reviewer": "Shubeeksh",
+    "status": "draft"
+  },
+  {
+    "id": "Q30",
+    "type": "notation",
+    "query": "\\sum_{\\sigma}u(\\hat{k},\\sigma)u^{\\dagger}(\\hat{k},\\sigma) spin sum for Dirac spinors",
+    "answer_hint": "Completeness sum over spinors at rest, (1 + gamma^0)/2.",
+    "gold_items": [
+      "4:eq19"
+    ],
+    "gold_blocks": [
+      "4:b60"
+    ],
+    "gold_sections": [
+      "4"
+    ],
+    "similar_equations": [],
+    "confidence": "high",
+    "reviewer": "Helen",
+    "status": "draft"
+  },
+  {
+    "id": "Q31",
+    "type": "notation",
+    "query": "Which condition do the Lorentz matrices \\Lambda^{\\mu}_{~\\alpha}\\Lambda^{\\nu}_{~\\beta}\\eta^{\\alpha\\beta} satisfy?",
+    "answer_hint": "Preserving the Minkowski metric: Lambda Lambda eta = eta.",
+    "gold_items": [
+      "2.1:eq1",
+      "2.1:eq2"
+    ],
+    "gold_blocks": [
+      "2.1:b2",
+      "2.1:b4"
+    ],
+    "gold_sections": [
+      "2.1"
+    ],
+    "similar_equations": [],
+    "confidence": "high",
+    "reviewer": "Sanjay",
+    "status": "draft"
+  },
+  {
+    "id": "Q32",
+    "type": "notation",
+    "query": "[J_i, J_j] = i\\epsilon_{ij}^{~~k}J_k commutators of rotation and boost generators",
+    "answer_hint": "Poincare Lie algebra written in terms of J_i, K_j, P_mu.",
+    "gold_items": [
+      "2.1:eq7"
+    ],
+    "gold_blocks": [
+      "2.1:b21"
+    ],
+    "gold_sections": [
+      "2.1"
+    ],
+    "similar_equations": [],
+    "confidence": "high",
+    "reviewer": "Shreya",
+    "status": "draft"
+  },
+  {
+    "id": "Q33",
+    "type": "notation",
+    "query": "How do correlation functions \\langle 0|T\\{\\Phi(x_1)\\cdots\\Phi(x_n)\\}|0\\rangle follow from derivatives \\delta^n Z[J]/\\delta J^n?",
+    "answer_hint": "n-th functional derivative of Z[J] at J = 0, normalized, gives the n-point function (with factors of i).",
+    "gold_items": [
+      "20.4:eq7",
+      "20.3:eq4"
+    ],
+    "gold_blocks": [
+      "20.4:b15",
+      "20.3:b9"
+    ],
+    "gold_sections": [
+      "20.3",
+      "20.4"
+    ],
+    "similar_equations": [
+      "20.4:eq1"
+    ],
+    "confidence": "medium",
+    "reviewer": "Shubeeksh",
+    "status": "draft"
+  },
+  {
+    "id": "Q34",
+    "type": "context",
+    "query": "Why is the integral of the scalar Lagrangian density over Minkowski space Poincare invariant?",
+    "answer_hint": "Under x -> Lambda x + a the contracted derivative term is a scalar and the measure is unchanged.",
+    "gold_items": [
+      "L3127-3134",
+      "6:eq2"
+    ],
+    "gold_blocks": [
+      "6:b15",
+      "6:b14"
+    ],
+    "gold_sections": [
+      "6"
+    ],
+    "similar_equations": [],
+    "confidence": "high",
+    "reviewer": "Helen",
+    "status": "draft"
+  },
+  {
+    "id": "Q35",
+    "type": "context",
+    "query": "How does one derive the relation between photon energy and scattering angle in Compton scattering?",
+    "answer_hint": "Use four-momentum conservation with p^2 = -m^2 to get m(omega - omega') = omega omega' (1 - cos theta).",
+    "gold_items": [
+      "14.2:eq17",
+      "14.2:eq18"
+    ],
+    "gold_blocks": [
+      "14.2:b42",
+      "14.2:b44"
+    ],
+    "gold_sections": [
+      "14.2"
+    ],
+    "similar_equations": [],
+    "confidence": "high",
+    "reviewer": "Sanjay",
+    "status": "draft"
+  },
+  {
+    "id": "Q36",
+    "type": "context",
+    "query": "How does the Thomson cross-section arise as the low-energy limit of Compton scattering?",
+    "answer_hint": "For omega/m << 1 the Klein-Nishina result reduces to the classical Thomson cross-section.",
+    "gold_items": [
+      "14.2:eq23",
+      "14.2:b58"
+    ],
+    "gold_blocks": [
+      "14.2:b57",
+      "14.2:b58"
+    ],
+    "gold_sections": [
+      "14.2"
+    ],
+    "similar_equations": [],
+    "confidence": "high",
+    "reviewer": "Shreya",
+    "status": "draft"
+  },
+  {
+    "id": "Q37",
+    "type": "context",
+    "query": "How is the energy of a free scalar field expressed in terms of mode amplitudes?",
+    "answer_hint": "Insert the mode expansion into P^0 and use orthogonality; cross terms with a(k)a(-k) drop out, leaving omega|a|^2.",
+    "gold_items": [
+      "6.2:eq9",
+      "6.2:eq10"
+    ],
+    "gold_blocks": [
+      "6.2:b20",
+      "6.2:b22"
+    ],
+    "gold_sections": [
+      "6.2"
+    ],
+    "similar_equations": [],
+    "confidence": "high",
+    "reviewer": "Shubeeksh",
+    "status": "draft"
+  },
+  {
+    "id": "Q38",
+    "type": "context",
+    "query": "How does the Pauli exclusion principle follow from relativistic causality?",
+    "answer_hint": "Micro-causality (fields commute/anticommute at spacelike separation) forces anti-commutators for spin-1/2 fields.",
+    "gold_items": [
+      "8.4:b1",
+      "8.4:b7",
+      "8.4:b8"
+    ],
+    "gold_blocks": [
+      "8.4:b1",
+      "8.4:b7",
+      "8.4:b8"
+    ],
+    "gold_sections": [
+      "8.4"
+    ],
+    "similar_equations": [],
+    "confidence": "high",
+    "reviewer": "Helen",
+    "status": "draft"
+  },
+  {
+    "id": "Q39",
+    "type": "context",
+    "query": "Why does a quantum field evolve into a coherent state under a classical source?",
+    "answer_hint": "A source term linear in the field displaces the vacuum into a coherent state.",
+    "gold_items": [
+      "9.4:b1",
+      "9.4:b2"
+    ],
+    "gold_blocks": [
+      "9.4:b1",
+      "9.4:b2"
+    ],
+    "gold_sections": [
+      "9.4"
+    ],
+    "similar_equations": [],
+    "confidence": "high",
+    "reviewer": "Sanjay",
+    "status": "draft"
+  },
+  {
+    "id": "Q40",
+    "type": "context",
+    "query": "Why is the Lagrangian density invariant under the CPT transformation?",
+    "answer_hint": "Each tensor index and each derivative contributes a sign; the signs cancel in a Lorentz-scalar Lagrangian.",
+    "gold_items": [
+      "8.3:b11",
+      "8.3:b12"
+    ],
+    "gold_blocks": [
+      "8.3:b11",
+      "8.3:b12"
+    ],
+    "gold_sections": [
+      "8.3"
+    ],
+    "similar_equations": [],
+    "confidence": "high",
+    "reviewer": "Shreya",
+    "status": "draft"
+  }
+]
