@@ -100,11 +100,12 @@ def table(results: dict, metric: str) -> str:
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--model", choices=sorted(PRESETS), default="nomic")
+    ap.add_argument("--questions", type=Path, default=QUESTIONS)
     ap.add_argument("--out", default=str(ROOT / "data/processed/results_baseline.json"))
     ap.add_argument("--strategies", nargs="*", default=STRATEGIES)
     args = ap.parse_args()
 
-    questions = json.loads(QUESTIONS.read_text(encoding="utf-8"))
+    questions = json.loads(args.questions.read_text(encoding="utf-8"))
     split = split_dev_test(questions)
     embedder = PRESETS[args.model]()
     results: dict = {}

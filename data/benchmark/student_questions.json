@@ -1,0 +1,180 @@
+[
+  {
+    "id": "Q41",
+    "type": "context",
+    "query": "When I vary the free scalar action, why can I ignore the term left over from integration by parts?",
+    "answer_hint": "It is a boundary term and vanishes with the assumed boundary conditions.",
+    "gold_items": [
+      "6:b16",
+      "6:b17"
+    ],
+    "gold_blocks": [
+      "6:b16",
+      "6:b17"
+    ],
+    "gold_sections": [
+      "6"
+    ],
+    "similar_equations": [],
+    "status": "draft"
+  },
+  {
+    "id": "Q42",
+    "type": "notation",
+    "query": "If I swap the order of two gamma matrices and add the two products, what do I get?",
+    "answer_hint": "The anticommutator is minus twice the metric in the notes' convention.",
+    "gold_items": [
+      "3.3:b5"
+    ],
+    "gold_blocks": [
+      "3.3:b5"
+    ],
+    "gold_sections": [
+      "3.3"
+    ],
+    "similar_equations": [],
+    "status": "draft"
+  },
+  {
+    "id": "Q43",
+    "type": "context",
+    "query": "Why doesn't shifting or boosting my coordinates change the value of the scalar field action?",
+    "answer_hint": "The scalar integrand transforms by changing its argument, and the spacetime measure is invariant.",
+    "gold_items": [
+      "6:b14",
+      "6:b15"
+    ],
+    "gold_blocks": [
+      "6:b14",
+      "6:b15"
+    ],
+    "gold_sections": [
+      "6"
+    ],
+    "similar_equations": [],
+    "status": "draft"
+  },
+  {
+    "id": "Q44",
+    "type": "concept",
+    "query": "If I know all the Fourier coefficients of a free scalar field, how do I calculate its total energy?",
+    "answer_hint": "Integrate the frequency times the squared magnitude of each mode over momentum.",
+    "gold_items": [
+      "6.2:b20",
+      "6.2:b22"
+    ],
+    "gold_blocks": [
+      "6.2:b20",
+      "6.2:b22"
+    ],
+    "gold_sections": [
+      "6.2"
+    ],
+    "similar_equations": [],
+    "status": "draft"
+  },
+  {
+    "id": "Q45",
+    "type": "concept",
+    "query": "What differential equation should the response to a point source satisfy for a massive scalar field?",
+    "answer_hint": "The Klein-Gordon operator acting on the Green's function gives a negative spacetime delta function.",
+    "gold_items": [
+      "7.3:b2"
+    ],
+    "gold_blocks": [
+      "7.3:b2"
+    ],
+    "gold_sections": [
+      "7.3"
+    ],
+    "similar_equations": [],
+    "status": "draft"
+  },
+  {
+    "id": "Q46",
+    "type": "concept",
+    "query": "How do I expand a time-ordered string of fields into normal-ordered pieces?",
+    "answer_hint": "Add the normal-ordered term and terms for each possible set of pair contractions.",
+    "gold_items": [
+      "11.1:b15"
+    ],
+    "gold_blocks": [
+      "11.1:b15"
+    ],
+    "gold_sections": [
+      "11.1"
+    ],
+    "similar_equations": [],
+    "status": "draft"
+  },
+  {
+    "id": "Q47",
+    "type": "concept",
+    "query": "For a photon bouncing off an electron at rest, how do I get the outgoing energy from the scattering angle?",
+    "answer_hint": "Use the Compton formula relating the inverse energies and the scattering angle.",
+    "gold_items": [
+      "14.2:b44"
+    ],
+    "gold_blocks": [
+      "14.2:b44"
+    ],
+    "gold_sections": [
+      "14.2"
+    ],
+    "similar_equations": [],
+    "status": "draft"
+  },
+  {
+    "id": "Q48",
+    "type": "context",
+    "query": "What does Compton scattering reduce to when the incoming photon energy is tiny compared with the electron mass?",
+    "answer_hint": "Its leading cross section is the Thomson cross section.",
+    "gold_items": [
+      "14.2:b57",
+      "14.2:b58"
+    ],
+    "gold_blocks": [
+      "14.2:b57",
+      "14.2:b58"
+    ],
+    "gold_sections": [
+      "14.2"
+    ],
+    "similar_equations": [],
+    "status": "draft"
+  },
+  {
+    "id": "Q49",
+    "type": "notation",
+    "query": "Which quantity tells me how fast the coupling changes if I vary the renormalization scale on a log axis?",
+    "answer_hint": "The beta function is the derivative of the coupling with respect to log of the scale.",
+    "gold_items": [
+      "22.2:b8"
+    ],
+    "gold_blocks": [
+      "22.2:b8"
+    ],
+    "gold_sections": [
+      "22.2"
+    ],
+    "similar_equations": [],
+    "status": "draft"
+  },
+  {
+    "id": "Q50",
+    "type": "notation",
+    "query": "What do I subtract from W[J] to switch from the source J to the mean field as my variable?",
+    "answer_hint": "Subtract the spacetime integral of the source times the mean field.",
+    "gold_items": [
+      "22.1:b25"
+    ],
+    "gold_blocks": [
+      "22.1:b25"
+    ],
+    "gold_sections": [
+      "22.1"
+    ],
+    "similar_equations": [],
+    "status": "draft"
+  }
+]

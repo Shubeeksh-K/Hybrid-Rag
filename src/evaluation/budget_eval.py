@@ -49,8 +49,9 @@ def seen_blocks(hits, budget: int, btok: dict[str, int]) -> set[str]:
     return seen
 
 
-def run(model: str, budgets: list[int], strategies: list[str], weights=(1.0, 1.0, 1.0)) -> dict:
-    questions = json.loads(QUESTIONS.read_text(encoding="utf-8"))
+def run(model: str, budgets: list[int], strategies: list[str], weights=(1.0, 1.0, 1.0),
+        questions_path: Path = QUESTIONS) -> dict:
+    questions = json.loads(questions_path.read_text(encoding="utf-8"))
     btok = block_tokens(Document.load(ROOT / "data/processed/date_qft.json"))
     embedder = PRESETS[model]()
     out: dict = {}
@@ -82,11 +83,14 @@ def table(res: dict, budget: int, key: str) -> str:
 
 def main() -> None:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--model", default="nomic")
-    ap.add_argument("--budgets", type=int, nargs="*", default=[500, 1000, 2000])
+    ap.add_argument("--model", choices=sorted(PRESETS), default="nomic")
+    ap.add_argument("--budgets", type=int, nargs="+", default=[500, 1000, 2000])
+    ap.add_argument("--questions", type=Path, default=QUESTIONS)
     ap.add_argument("--out", default=str(ROOT / "data/processed/results_budget.json"))
     args = ap.parse_args()
-    res = run(args.model, args.budgets, STRATEGIES)
+    if min(args.budgets) < 1:
+        ap.error("--budgets must be positive")
+    res = run(args.model, args.budgets, STRATEGIES, questions_path=args.questions)
     Path(args.out).write_text(json.dumps(res, indent=1), encoding="utf-8")
     for b in args.budgets:
         print(f"\n### hit @ {b} tokens\n" + table(res, b, "hit"))
